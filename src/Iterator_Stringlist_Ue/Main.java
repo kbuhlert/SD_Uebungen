@@ -4,9 +4,11 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        StringList sl = new StringList("Hallo dies ist ein Test");
+        StringList sl = new StringList("Hallo dies ist ein Test");  //Konstruktor von Stringlist, speichert jeden Buchstaben in Array
 
-        for(String w : sl)
+        //
+
+        for(String w : sl)  //Iterieren über das Objekt Stringlist,
         {
             System.out.println(w);
         }

@@ -19,7 +19,7 @@ public class Wetterstation implements Subject{
         humidity = h;
         pressure = p;
 
-        //Daten haben sich geändert -> wir wollen Observer/Display informieren //WICHTIG!
+        //Daten haben sich geändert -> wir wollen Observer/Display informieren //WICHTIG!!!!
         notifyObservers();
     }
 
@@ -43,4 +43,6 @@ public class Wetterstation implements Subject{
             o.update(temperatur, humidity, pressure);
         }
     }
+
+    //Klasse hat ansonsten noch sämtliche anderen Methoden einer Wetterstation, das ist keine Extraklasse für das pattern
 }

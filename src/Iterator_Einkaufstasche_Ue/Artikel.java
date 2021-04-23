@@ -1,28 +1,29 @@
 package Iterator_Einkaufstasche_Ue;
 
-/*
-public class Artikel implements Iterable<String>{
-    private String Namen;
-    private double Gewicht;
+
+public class Artikel {
+
+    private String namen;
+    private Double gewicht;
+
+    public Artikel(String namen, Double gewicht) {
+        this.namen = namen;
+        this.gewicht = gewicht;
+    }
 
     public String getNamen() {
-        return Namen;
+        return namen;
     }
 
     public void setNamen(String namen) {
-        Namen = namen;
+        this.namen = namen;
     }
 
-    public double getGewicht() {
-        return Gewicht;
+    public Double getGewicht() {
+        return gewicht;
     }
 
-    public void setGewicht(double gewicht) {
-        Gewicht = gewicht;
+    public void setGewicht(Double gewicht) {
+        this.gewicht = gewicht;
     }
-
-    @Override
-    public Iterator iterator() {
-        return new Einkaufstasche();
-    }
-}*/
+}

@@ -9,6 +9,7 @@ public class SmartphoneDisplay implements Observer, DisplayElement{
 
     public SmartphoneDisplay(Subject wetterData) {
         this.wetterData = wetterData;
+        //wir haben das im Konstruktor gemacht, das könnte aber auch eine eigene Methode sein, die extra aufgerufen ist
         this.wetterData.registerObserver(this);  //bezieht sich auf das Objekt selber
     }
 
@@ -23,4 +24,13 @@ public class SmartphoneDisplay implements Observer, DisplayElement{
         this.pressure = pressure;
         display();
     }
+
+    public void stopReceiving(){
+        wetterData.registerObserver(this);
+        wetterData = null; //abhäbgig von bestimmten Anwendungen -> bräuchte dann aber auch eine Setter Methode um  die wieder neu zu setzen
+    }
+
+    //was ist was (was hat interessante informationen, wovon gibt es meherer die diese Infos wollen)
+
+    //wenn keine Infos mehr kommen sollen, dann muss es Methode zum Abmelden geben
 }

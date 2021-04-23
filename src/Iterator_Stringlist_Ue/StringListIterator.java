@@ -4,9 +4,11 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class StringListIterator implements Iterator<String> {
+    //hier legen wir fest wie unser Stringlist-Iterator die Stringliste durchlaufen soll
+
     //Iterator braucht Bezug zu den Daten und merkt sich aktuelle Position
-    private String[] words;
-    private int position;
+    private String[] words; //merke mir hier die Daten die ich bekommen habe (in Iterator Funktion der Stringlist)
+    private int position;   //merke mir Position
 
     public StringListIterator(String[] words){
         this.words = words;
@@ -28,7 +30,7 @@ public class StringListIterator implements Iterator<String> {
 
         //besserer code mit Prüfung ob es next gibt und ob
         if(hasNext()) {
-            return words[position++];
+            return words[position++];   //iterator liefert das aktuelle Element an position, dann position++
             }
         throw new NoSuchElementException("sind schon am Ende");
     }

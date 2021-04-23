@@ -1,6 +1,6 @@
 package Factory_Tierzuechter_Bsp;
 
-public abstract class AnimalBreeder {
+public abstract class Animal {
     /*In ihrem Programm möchten Sie Hunde und Katzen züchten. Da häufig neue Rassen hinzukommen, möchten Sie
     die factory Methode einsetzen, um am bestehenden Code nichts ändern zu müssen. Der Züchtungsprozess ist
     durch die Behörde vorgegeben und darf von keinem/keiner Züchterin verändert werden. Dies ist in der Methode
@@ -15,17 +15,16 @@ public abstract class AnimalBreeder {
     Sie können auch die Tests Klasse zum Testen der Funktionalität verwenden. (Deckt nur die wichtigsten
     Aspekte ab)*/
 
-    abstract Animal createAnimal(Breed breed);
+    String name;
 
-    public Animal deliverAnimal(Breed breed){
-        Animal animal = createAnimal(breed);
-
-        if (animal!= null){
-            return animal;
-        }
-        return null;
+    void cuddle (){
+        System.out.println("Steichel " + name);
+    }
+    void feed (){
+        System.out.println("Essen an " + name);
     }
 
-
-
+    public String getName() {
+        return name;
+    }
 }

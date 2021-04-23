@@ -2,6 +2,8 @@ package Observer_Weatherstation_Ue;
 
 public class Main {
     public static void main(String[] args) {
+        //wir erzeugen Observer, dann Subjekt, das registriert sich automatisch beim Observer
+
         Wetterstation ws = new Wetterstation();
 
         DigitalDisplay digitalDisplay = new DigitalDisplay(ws);

@@ -14,5 +14,4 @@ public class Milchschaum extends Extrazutat {
     public double kostet() {
         return getraenk.kostet() + 0.6;
     }
-
 }

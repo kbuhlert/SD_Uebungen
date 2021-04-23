@@ -1,6 +1,8 @@
 package Observer_Weatherstation_Ue;
 
-//Subjekt des Observer Patterns, wird vom Subjekt (Newsletter) implementiert
+//Vorlage für Subjekte des Observer Patterns, es wird vom Subjekt (Newsletter) implementiert
+//Subject weiß über Observer nur, dass Interface implementiert wird
+//Neue Observer können während Laufzeit hinzugefügt werden
 
 public interface Subject {
 
